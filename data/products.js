@@ -1,6 +1,5 @@
 const products = [
     {
-        _id: '1',
         name: 'iPhone 13 & 13 Pro',
         image: '/images/apple-iphone-1313-pro.webp',
         description:
@@ -13,7 +12,6 @@ const products = [
         numReviews: 12,
     },
     {
-        _id: '2',
         name: 'iPhone 13 Mini',
         image: '/images/apple-iphone-xxs11.webp',
         description:
@@ -26,7 +24,6 @@ const products = [
         numReviews: 8,
     },
     {
-        _id: '3',
         name: 'iPhone 13 Pro Max',
         image: '/images/apple-iphone-xxs11.webp',
         description:
@@ -39,7 +36,6 @@ const products = [
         numReviews: 12,
     },
     {
-        _id: '4',
         name: 'iPhone 12 Pro Max',
         image: '/images/apple-iphone-xxs11.webp',
         description:
@@ -52,7 +48,6 @@ const products = [
         numReviews: 12,
     },
     {
-        _id: '5',
         name: 'iPhone X/XS/11 Pro',
         image: '/images/apple-iphone-xxs11.webp',
         description:
@@ -65,7 +60,6 @@ const products = [
         numReviews: 10,
     },
     {
-        _id: '6',
         name: 'iPhone 6/6S/7/8/SE',
         image: '/images/apple-iphone-xxs11.webp',
         description:
