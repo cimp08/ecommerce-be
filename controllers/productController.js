@@ -6,6 +6,10 @@ import Product from "../models/productModel.js";
 // @access  Public
 
 const getProducts = asyncHandler(async (req, res) => {
+  const pageSize = 4;
+  const page = Number(req.query.pageNumber) || 1;
+  const brand = req.query.brand;
+
   const keyword = req.query.keyword
     ? {
         name: {
@@ -15,8 +19,21 @@ const getProducts = asyncHandler(async (req, res) => {
       }
     : {};
 
-  const products = await Product.find({ ...keyword });
-  res.json(products);
+  if (brand) {
+    const count = await Product.countDocuments({ ...keyword, brand: brand });
+    const products = await Product.find({ ...keyword, brand: brand })
+      .limit(pageSize)
+      .skip(pageSize * (page - 1));
+
+    res.json({ products, page, pages: Math.ceil(count / pageSize) });
+  } else {
+    const count = await Product.countDocuments({ ...keyword });
+    const products = await Product.find({ ...keyword })
+      .limit(pageSize)
+      .skip(pageSize * (page - 1));
+
+    res.json({ products, page, pages: Math.ceil(count / pageSize) });
+  }
 });
 
 // @desc    Fetch single product
