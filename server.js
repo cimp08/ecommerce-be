@@ -1,4 +1,5 @@
 import path from "path";
+import cors from "cors";
 import express from "express";
 import dotenv from "dotenv";
 import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
@@ -12,9 +13,16 @@ dotenv.config();
 
 connectDB();
 
-const app = express();
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 
+const app = express();
 app.use(express.json());
+
+
 
 app.get("/", (req, res) => {
   res.send("Api is running.....");
