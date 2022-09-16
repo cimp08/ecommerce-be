@@ -25,7 +25,13 @@ const getProducts = asyncHandler(async (req, res) => {
       .limit(pageSize)
       .skip(pageSize * (page - 1));
 
-    res.json({ products, page, pages: Math.ceil(count / pageSize) });
+    res.json(
+      { products, page, pages: Math.ceil(count / pageSize) },
+      {
+        sameSite: "none",
+        secure: true,
+      }
+    );
   } else {
     const count = await Product.countDocuments({ ...keyword });
     const products = await Product.find({ ...keyword })
@@ -161,11 +167,10 @@ const createProductReview = asyncHandler(async (req, res) => {
 // @access  Public
 
 const getTopProducts = asyncHandler(async (req, res) => {
-    const products = await Product.find({}).sort({ rating: -1}).limit(5)
+  const products = await Product.find({}).sort({ rating: -1 }).limit(5);
 
-    res.json(products)
+  res.json(products);
 });
-
 
 export {
   getProducts,
@@ -174,5 +179,5 @@ export {
   createProduct,
   updateProduct,
   createProductReview,
-  getTopProducts
+  getTopProducts,
 };
