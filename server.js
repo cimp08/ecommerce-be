@@ -16,7 +16,6 @@ connectDB();
 const app = express();
 app.use(express.json());
 
-const cors = cors();
 app.use(
   cors({
     origin: "*",
