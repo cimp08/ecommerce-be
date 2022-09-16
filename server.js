@@ -1,5 +1,4 @@
 import path from "path";
-import cors from "cors";
 import express from "express";
 import dotenv from "dotenv";
 import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
@@ -13,6 +12,7 @@ dotenv.config();
 
 connectDB();
 
+const cors = require("cors");
 app.use(
   cors({
     origin: "*",
