@@ -78,10 +78,11 @@ const createProduct = asyncHandler(async (req, res) => {
     user: req.user._id,
     image: "/images/sample.jpg",
     brand: "Sample märke",
-    category: "Sample kategori",
+    category: "Screenprotector",
     countInStock: 0,
     numReviews: 0,
-    description: "Sample beskrivning",
+    description:
+      "Skydda skärmen på din {FYLL I TELEFONENS NAMN} med glass screen protector. Högkvalitativt 9H härdat glas och ger din mobil ett heltäckande kant-till-kant-skydd som skyddar displayen mot repor, sprickor, stötar och slag. Självklart håller skyddet en hög klarhet med full transparens och full touch-funktionalitet av pekskärmen.",
   });
 
   const createdProduct = await product.save();
