@@ -2,6 +2,7 @@ import express from "express";
 import {
   authUser,
   registerUser,
+  registerUserByAdmin,
   getUserProfile,
   updateUserProfile,
   getUsers,
@@ -14,6 +15,8 @@ import { protect, isAdmin } from "../middleware/authMiddleware.js";
 const router = express.Router();
 
 router.route("/").post(registerUser).get(protect, isAdmin, getUsers);
+
+router.route("/admin").post(protect, isAdmin, registerUserByAdmin);
 
 router.post("/login", authUser);
 
