@@ -88,7 +88,7 @@ This can cause a response delay of up to 30 seconds for the first request that c
    ```
 3. Create .env 
    ```JS
-   PORT = 5000
+   PORT = 8000
    MONGO_URI = ENTER MONGO URI
    JWT_SECRET = ENTER SECRET 
    PAYPAL_CLIENT_ID = ENTER PAYPAL CLIENT ID
