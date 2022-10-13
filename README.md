@@ -162,7 +162,7 @@ This can cause a response delay of up to 30 seconds for the first request that c
 
 ## Roadmap
 
-GitHub Projects (Classic): [Sprint 1-4](https://github.com/cimp08/ecommerce-fe/projects?query=is%3Aclosed&type=classic)
+GitHub Projects (Classic): [Sprint 1-4](https://github.com/cimp08/ecommerce-be/projects?query=is%3Aclosed&type=classic)
 
 <!-- LICENSE -->
 
