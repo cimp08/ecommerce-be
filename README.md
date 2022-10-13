@@ -97,7 +97,6 @@ The root path is: https://glasskydd-api.onrender.com
 ### Deployment
 
 Backend is deployed with Render’s free plan that automatically spun down after 15 minutes of inactivity. When a new request for a free service comes in, Render spins it up again so it can process the request.
-
 This can cause a response delay of up to 30 seconds for the first request that comes in after a period of inactivity.
 
 ### Naming Conventions
