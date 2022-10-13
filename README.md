@@ -163,7 +163,7 @@ This can cause a response delay of up to 30 seconds for the first request that c
 
 ## Roadmap
 
-Fill in later ...
+GitHub Projects (Classic): [Sprint 1-4](https://github.com/cimp08/ecommerce-be/projects?query=is%3Aclosed&type=classic)
 
 <!-- LICENSE -->
 
